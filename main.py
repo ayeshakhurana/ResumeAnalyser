@@ -134,6 +134,8 @@ def run():
     if choice == 'User':
         st.markdown('''<h5 style='text-align: left; color: white;'>Upload your resume, and get smart recommendation based on it.</h5>''', unsafe_allow_html=True)
         st.write("For sample resume download the below file: ")
+
+        #sample link
         sample_file_link = get_link(pd.DataFrame(), 'sample_resume.pdf', 'Download Sample Resume')
         st.markdown(sample_file_link, unsafe_allow_html=True)
         pdf_file = st.file_uploader("Choose your Resume", type=["pdf"])
@@ -173,7 +175,9 @@ def run():
                 
                 st.header("Skills")
                 keywords = st_tags(label='Key Skills:', text='Type and press enter', value=resumedata['skills'], key=1)
+                
 
+                #keyword updated
                 ds_keyword = ['tensorflow', 'keras', 'pytorch', 'c','c++','ai','machine learning', 'deep Learning', 'flask', 'streamlit']
                 web_keyword = ['react', 'django', 'nodejs', 'react js','nextjs' 'php', 'laravel', 'mongodb', 'sql', 'javascript', 'angular js', 'c#', 'flask','api']
                 android_keyword = ['android', 'android development', 'flutter', 'kotlin', 'xml', 'kivy']
